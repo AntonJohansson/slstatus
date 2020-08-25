@@ -63,11 +63,11 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ disk_perc, 		"root %-3s",	"/"},
-	{ disk_perc, 		"home %-3s",	"/home"},
+	{ disk_perc, 		"  / %-3s",	"/"},
+	{ disk_perc, 		"~ %-3s",	"/home"},
 	{ ram_perc, 		"ram %-3s ", 	NULL},
-	{ run_command,		"vol %-3s ",	"amixer sget Master | awk -F \"[][]\" '/%/ {print $2}' | grep -o \"[0-9]*\""},
+	/* { run_command,		"vol %-3s ",	"amixer sget Master | awk -F \"[][]\" '/%/ {print $2}' | grep -o \"[0-9]*\""}, */
 	{ cpu_perc,			"cpu %-3s ",	NULL},
 	{ battery_perc, 	"bat %-3s ", 	"BAT0"},
-	{ datetime, 		"%s", 			"%a %d %B %H:%M" },
+	{ datetime, 		"%s  ", 		"%a %d %B %H:%M" },
 };
